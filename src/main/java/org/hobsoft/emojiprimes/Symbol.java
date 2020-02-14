@@ -15,6 +15,6 @@ public interface Symbol
 	default boolean isOperator(int minPrecedence)
 	{
 		return (this instanceof Operator)
-			&& ((Operator) this).getPrecedence() >= minPrecedence;
+			&& ((Operator) this).precedence() >= minPrecedence;
 	}
 }

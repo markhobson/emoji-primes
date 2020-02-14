@@ -56,10 +56,10 @@ public class Expression
 			Operator operator = iterator.next().asOperator();
 			int rhs = iterator.next().asOperand().value();
 			
-			while (iterator.hasNext() && iterator.peek().isOperator(operator.getPrecedence() + 1))
+			while (iterator.hasNext() && iterator.peek().isOperator(operator.precedence() + 1))
 			{
 				Operator peekOperator = iterator.peek().asOperator();
-				rhs = evaluate(iterator, rhs, peekOperator.getPrecedence());
+				rhs = evaluate(iterator, rhs, peekOperator.precedence());
 			}
 			
 			lhs = operator.evaluate(lhs, rhs);

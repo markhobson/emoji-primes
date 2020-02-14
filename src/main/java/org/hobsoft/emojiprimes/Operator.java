@@ -60,7 +60,7 @@ public enum Operator implements Symbol
 		this.precedence = precedence;
 	}
 	
-	public int getPrecedence()
+	public int precedence()
 	{
 		return precedence;
 	}
