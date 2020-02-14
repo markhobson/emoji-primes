@@ -1,16 +1,16 @@
-package emojiprimes;
+package org.hobsoft.emojiprimes;
 
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import static emojiprimes.Operand.FOUR;
-import static emojiprimes.Operand.ONE;
-import static emojiprimes.Operand.THREE;
-import static emojiprimes.Operand.TWO;
-import static emojiprimes.Operator.MULTIPLY;
-import static emojiprimes.Operator.PLUS;
+import static org.hobsoft.emojiprimes.Operand.FOUR;
+import static org.hobsoft.emojiprimes.Operand.ONE;
+import static org.hobsoft.emojiprimes.Operand.THREE;
+import static org.hobsoft.emojiprimes.Operand.TWO;
+import static org.hobsoft.emojiprimes.Operator.MULTIPLY;
+import static org.hobsoft.emojiprimes.Operator.PLUS;
 
 public class ExpressionTest
 {

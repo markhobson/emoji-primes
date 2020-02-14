@@ -1,4 +1,4 @@
-package emojiprimes;
+package org.hobsoft.emojiprimes;
 
 import java.util.ArrayList;
 import java.util.List;

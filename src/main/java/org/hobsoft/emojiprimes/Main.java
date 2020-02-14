@@ -1,4 +1,4 @@
-package emojiprimes;
+package org.hobsoft.emojiprimes;
 
 import java.io.IOException;
 import java.io.PrintWriter;

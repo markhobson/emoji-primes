@@ -1,4 +1,4 @@
-package emojiprimes;
+package org.hobsoft.emojiprimes;
 
 public enum Operand implements Symbol
 {

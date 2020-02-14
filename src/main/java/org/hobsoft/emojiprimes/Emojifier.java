@@ -1,4 +1,4 @@
-package emojiprimes;
+package org.hobsoft.emojiprimes;
 
 import java.util.EnumSet;
 import java.util.Map;
