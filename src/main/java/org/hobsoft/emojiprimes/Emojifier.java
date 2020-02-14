@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class Emojifier
 {
-	private static final EnumSet<Operand> NUMBERS = EnumSet.allOf(Operand.class);
+	private static final EnumSet<Operand> OPERANDS = EnumSet.allOf(Operand.class);
 
 	private static final EnumSet<Operator> OPERATORS = EnumSet.allOf(Operator.class);
 	
@@ -14,26 +14,26 @@ public class Emojifier
 	{
 		Map<Integer, Expression> results = new TreeMap<>();
 		
-		for (Operand number : NUMBERS)
+		for (Operand operand : OPERANDS)
 		{
-			emojify(results, new Expression(number), remove(NUMBERS, number), OPERATORS);
+			emojify(results, new Expression(operand), remove(OPERANDS, operand), OPERATORS);
 		}
 		
 		return results;
 	}
 	
-	public void emojify(Map<Integer, Expression> results, Expression expression, EnumSet<Operand> numbers,
+	public void emojify(Map<Integer, Expression> results, Expression expression, EnumSet<Operand> operands,
 		EnumSet<Operator> operators)
 	{
 		evaluate(results, expression);
 
 		for (Operator operator : operators)
 		{
-			for (Operand number : numbers)
+			for (Operand operand : operands)
 			{
-				Expression next = new Expression(expression).add(operator, number);
+				Expression next = new Expression(expression).add(operator, operand);
 				
-				emojify(results, next, remove(numbers, number), remove(operators, operator));
+				emojify(results, next, remove(operands, operand), remove(operators, operator));
 			}
 		}
 	}
