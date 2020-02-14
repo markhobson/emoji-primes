@@ -46,7 +46,7 @@ public class Expression
 		PeekingIterator<Symbol> iterator = Iterators.peekingIterator(symbols.iterator());
 		Operand operand = iterator.next().asOperand();
 		
-		return evaluate(iterator, operand.getValue(), 0);
+		return evaluate(iterator, operand.value(), 0);
 	}
 	
 	private static int evaluate(PeekingIterator<Symbol> iterator, int lhs, int minPrecedence)
@@ -54,7 +54,7 @@ public class Expression
 		while (iterator.hasNext() && iterator.peek().isOperator(minPrecedence))
 		{
 			Operator operator = iterator.next().asOperator();
-			int rhs = iterator.next().asOperand().getValue();
+			int rhs = iterator.next().asOperand().value();
 			
 			while (iterator.hasNext() && iterator.peek().isOperator(operator.getPrecedence() + 1))
 			{

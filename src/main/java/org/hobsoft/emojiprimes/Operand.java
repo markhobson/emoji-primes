@@ -25,7 +25,7 @@ public enum Operand implements Symbol
 		this.value = value;
 	}
 	
-	public int getValue()
+	public int value()
 	{
 		return value;
 	}
