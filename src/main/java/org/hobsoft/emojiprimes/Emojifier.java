@@ -22,7 +22,7 @@ public class Emojifier
 		return results;
 	}
 	
-	public void emojify(Map<Integer, Expression> results, Expression expression, EnumSet<Operand> operands,
+	private void emojify(Map<Integer, Expression> results, Expression expression, EnumSet<Operand> operands,
 		EnumSet<Operator> operators)
 	{
 		evaluate(results, expression);
