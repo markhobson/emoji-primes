@@ -24,6 +24,7 @@ public class Main
 	{
 		writer.println("# Emoji Primes");
 		writer.println();
+		writer.println("```");
 		
 		Integer previous = null;
 		
@@ -39,5 +40,7 @@ public class Main
 			
 			previous = number;
 		}
+		
+		writer.println("```");
 	}
 }
