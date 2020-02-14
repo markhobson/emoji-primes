@@ -50,13 +50,13 @@ public enum Operator implements Symbol
 		}
 	};
 	
-	private final String symbol;
+	private final String emoji;
 	
 	private final int precedence;
 	
-	Operator(String symbol, int precedence)
+	Operator(String emoji, int precedence)
 	{
-		this.symbol = symbol;
+		this.emoji = emoji;
 		this.precedence = precedence;
 	}
 	
@@ -70,6 +70,6 @@ public enum Operator implements Symbol
 	@Override
 	public String toString()
 	{
-		return symbol;
+		return emoji;
 	}
 }
